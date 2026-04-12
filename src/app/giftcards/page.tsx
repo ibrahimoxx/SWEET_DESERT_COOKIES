@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 const giftCardCategories = [
   {
@@ -72,7 +71,7 @@ export default function GiftCardsPage() {
       {/* Gift card categories */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          {giftCardCategories.map((category, catIdx) => (
+          {giftCardCategories.map((category) => (
             <div key={category.name} className="mb-16 last:mb-0">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
