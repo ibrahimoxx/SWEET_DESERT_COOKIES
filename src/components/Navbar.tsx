@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { mainNavLinks } from "@/data/navigation";
 import { cn } from "@/lib/utils";
+import { brand } from "@/data/brand";
 import { MobileMenu } from "./MobileMenu";
 
 export function Navbar() {
@@ -11,11 +12,14 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav
+        aria-label="Main"
+        className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
+      >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl font-extrabold tracking-tight text-black">
-            CRUMBL
+            {brand.wordmark}
           </span>
         </Link>
 
@@ -62,6 +66,8 @@ export function Navbar() {
               "transition-colors hover:bg-gray-100"
             )}
             aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-menu"
           >
             <div className="flex flex-col gap-1.5">
               <span

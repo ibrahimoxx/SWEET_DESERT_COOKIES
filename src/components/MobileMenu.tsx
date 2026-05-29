@@ -12,12 +12,15 @@ interface MobileMenuProps {
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   return (
     <div
+      id="mobile-menu"
+      aria-hidden={!open}
+      inert={!open}
       className={cn(
         "fixed inset-x-0 top-16 bottom-0 z-40 bg-white transition-transform duration-300 md:hidden",
         open ? "translate-x-0" : "translate-x-full"
       )}
     >
-      <nav className="flex flex-col px-6 pt-8">
+      <nav aria-label="Mobile" className="flex flex-col px-6 pt-8">
         {mainNavLinks.map((link) => (
           <div key={link.href}>
             {link.external ? (

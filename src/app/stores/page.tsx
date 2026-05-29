@@ -34,7 +34,8 @@ export default function StoresPage() {
             className="mx-auto mt-8 max-w-md"
           >
             <input
-              type="text"
+              type="search"
+              aria-label="Search stores by city, state, or zip code"
               placeholder="Search by city, state, or zip code..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
