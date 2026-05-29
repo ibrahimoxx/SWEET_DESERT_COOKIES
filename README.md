@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cookies — White-Label Cookie Brand Website
+
+Production-ready Next.js website for a cookie/dessert brand. Built as a configurable template: all client-specific content lives in dedicated data files, so rebranding is a focused data swap — no hunting through JSX.
+
+## Stack
+
+- **Next.js 16** (App Router) + **React 19**
+- **TypeScript 5**
+- **Tailwind CSS 4**
+- **Framer Motion** — animations
+- **React Leaflet** — store locator map
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
+cp .env.example .env.local   # fill in real values
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Script | Purpose |
+|--------|---------|
+| `npm run dev` | Dev server |
+| `npm run build` | Production build |
+| `npm run start` | Serve production build |
+| `npm run lint` | ESLint |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+See [`.env.example`](.env.example). All are optional — the site builds without them.
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Purpose |
+|----------|---------|
+| `NEXT_PUBLIC_GA_ID` | Google Analytics ID. GA only loads when set. |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (sitemap + OpenGraph). Defaults to production domain. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/                  # routes (App Router)
+│   ├── layout.tsx        # root layout, metadata, GA
+│   ├── sitemap.ts        # auto-generated sitemap
+│   └── <route>/page.tsx  # one folder per page
+├── components/           # Navbar, Footer, Hero, CookieCard, icons, ...
+├── data/                 # ← ALL client-configurable content
+│   ├── brand.ts          # identity: name, tagline, contact, app links, SEO
+│   ├── cookies.ts        # product menu
+│   ├── rewards.ts        # loyalty tiers
+│   ├── navigation.ts     # nav + social links
+│   ├── stores.ts         # store locations
+│   ├── milestones.ts     # timeline + stats
+│   └── catering.ts       # catering features/contact
+├── types/                # shared TS types
+└── lib/                  # utilities (cn, ...)
+```
 
-## Deploy on Vercel
+## Rebranding Guide
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+To rebrand for a new client, edit these **6 files** — nothing else:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| # | File | What to change |
+|---|------|----------------|
+| 1 | `src/data/brand.ts` | Name, legal name, tagline, founders, year, SEO meta, contact, app store links |
+| 2 | `src/app/globals.css` | Brand color tokens (`--crumbl-*` custom properties) |
+| 3 | `src/data/cookies.ts` | Product menu (names, descriptions, images, colors) |
+| 4 | `src/data/rewards.ts` | Loyalty tier names, thresholds, perks |
+| 5 | `src/data/navigation.ts` | Social media URLs, nav labels |
+| 6 | `src/components/icons.tsx` | Logo SVG (inline component, not an image file) |
+
+Required client info is collected in [`CLIENT_INTAKE_FORM.md`](CLIENT_INTAKE_FORM.md).
+
+After editing, run `npm run build` to verify.
+
+## Deployment
+
+Optimized for [Vercel](https://vercel.com). Set the environment variables above in the project dashboard, then deploy. Any Node host running `npm run build && npm run start` also works.

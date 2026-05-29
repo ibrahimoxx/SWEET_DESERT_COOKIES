@@ -49,3 +49,6 @@ graphify-out/
 # AI output
 generated/
 ai-output/
+
+# Claude local config (personal, not shared)
+.claude/settings.local.json

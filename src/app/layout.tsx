@@ -13,6 +13,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(brand.seo.url),
   title: brand.seo.title,
   description: brand.seo.description,
   icons: {
