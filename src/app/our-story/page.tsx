@@ -1,45 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const milestones = [
-  {
-    year: "2017",
-    title: "The Beginning",
-    description:
-      "Co-founders Jason McGowan and Sawyer Hemsley teamed up on a quest to bake the perfect chocolate chip cookie. The first Crumbl location opened in Logan, Utah.",
-  },
-  {
-    year: "2018",
-    title: "The Iconic Pink Box",
-    description:
-      "Sawyer Hemsley developed the iconic 4-pack pink box with college classmates, creating the signature Crumbl packaging known worldwide.",
-  },
-  {
-    year: "2019",
-    title: "Rapid Growth",
-    description:
-      "Crumbl expanded to dozens of locations across multiple states, with lines forming around the block for the weekly rotating menu.",
-  },
-  {
-    year: "2020",
-    title: "Going Viral",
-    description:
-      "Crumbl became a social media sensation, with millions of views on TikTok and Instagram as fans shared their weekly flavor reviews.",
-  },
-  {
-    year: "2023",
-    title: "1,000 Bakeries",
-    description:
-      "Crumbl surpassed 1,000 bakery locations nationwide, making it the fastest-growing cookie company in America.",
-  },
-  {
-    year: "Today",
-    title: "A Sweet Celebration",
-    description:
-      "With 300+ rotating flavors and a passionate community of cookie lovers, Crumbl continues to bring friends and family together.",
-  },
-];
+import { milestones, companyStats } from "@/data/milestones";
+import { brand } from "@/data/brand";
 
 export default function OurStoryPage() {
   return (
@@ -61,10 +24,10 @@ export default function OurStoryPage() {
               transition={{ delay: 0.1 }}
               className="mt-6 text-lg text-crumbl-brown"
             >
-              Created in 2017 when co-founders Jason McGowan and Sawyer Hemsley
-              teamed up on a quest to bake the perfect chocolate chip cookie,
-              they dreamt of bringing people together over a box of the best
-              cookies in the world.
+              Created in {brand.foundingYear} when co-founders{" "}
+              {brand.founders.join(" and ")} teamed up on a quest to bake the
+              perfect chocolate chip cookie, they dreamt of bringing people
+              together over a box of the best cookies in the world.
             </motion.p>
           </div>
         </div>
@@ -97,7 +60,7 @@ export default function OurStoryPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-crumbl-pink"
+              className="relative aspect-4/3 overflow-hidden rounded-2xl bg-crumbl-pink"
             >
               <div className="flex h-full items-center justify-center text-6xl">
                 🍪
@@ -188,12 +151,7 @@ export default function OurStoryPage() {
       <section className="bg-crumbl-dark-brown py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-            {[
-              { stat: "1,000+", label: "Bakeries Nationwide" },
-              { stat: "300+", label: "Unique Flavors" },
-              { stat: "2017", label: "Year Founded" },
-              { stat: "6", label: "New Flavors Weekly" },
-            ].map((item) => (
+            {companyStats.map((item) => (
               <motion.div
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { brand } from "@/data/brand";
 
 export default function ContactPage() {
   return (
@@ -33,14 +34,14 @@ export default function ContactPage() {
             <p className="text-3xl">📧</p>
             <h3 className="mt-4 font-bold">Email Support</h3>
             <p className="mt-2 text-sm text-gray-500">
-              support@crumblcookies.com
+              {brand.contact.supportEmail}
             </p>
           </div>
           <div className="rounded-2xl bg-gray-50 p-8 text-center">
             <p className="text-3xl">📞</p>
             <h3 className="mt-4 font-bold">Catering Specialist</h3>
-            <p className="mt-2 text-sm text-gray-500">888.594.0025</p>
-            <p className="text-xs text-gray-400">Mon-Fri, 9am-4pm MT</p>
+            <p className="mt-2 text-sm text-gray-500">{brand.contact.phone}</p>
+            <p className="text-xs text-gray-400">{brand.contact.hours}</p>
           </div>
         </motion.div>
       </div>

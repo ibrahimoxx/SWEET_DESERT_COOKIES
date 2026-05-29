@@ -2,36 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-
-const features = [
-  {
-    title: "Schedule Ahead",
-    description:
-      "Need more cookies? Place an order in advance and make your event a hit! Download the app or order online to schedule your catering.",
-    icon: "📅",
-  },
-  {
-    title: "Weekly Rotating Flavors",
-    description:
-      "With our expansive menu of 300+ weekly rotating flavors, Crumbl has something for everyone. New flavors drop every Sunday.",
-    icon: "🍪",
-  },
-  {
-    title: "White Glove Service",
-    description:
-      "We're excited to offer a white glove service tailored specifically for large orders. Our catering specialists handle everything.",
-    icon: "🤝",
-  },
-];
-
-const eventTypes = [
-  "Weddings",
-  "Corporate Events",
-  "Birthday Parties",
-  "School Functions",
-  "Community Gatherings",
-  "Holiday Celebrations",
-];
+import { cateringFeatures, cateringEventTypes, cateringContact } from "@/data/catering";
 
 export default function CateringPage() {
   return (
@@ -83,7 +54,7 @@ export default function CateringPage() {
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 md:grid-cols-3">
-            {features.map((feature, i) => (
+            {cateringFeatures.map((feature, i) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -110,7 +81,7 @@ export default function CateringPage() {
             Perfect for Any Occasion
           </h2>
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {eventTypes.map((event, i) => (
+            {cateringEventTypes.map((event, i) => (
               <motion.div
                 key={event}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -145,13 +116,13 @@ export default function CateringPage() {
                 of any size.
               </p>
               <a
-                href="tel:8885940025"
+                href={`tel:${cateringContact.phoneTel}`}
                 className="mt-4 inline-flex h-12 items-center justify-center rounded-full bg-black px-6 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
               >
-                Call 888.594.0025
+                Call {cateringContact.phone}
               </a>
               <p className="mt-2 text-sm text-gray-500">
-                Monday - Friday, 9am - 4pm MT
+                {cateringContact.hours}
               </p>
             </div>
           </div>

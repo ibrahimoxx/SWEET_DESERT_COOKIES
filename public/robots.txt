@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crumblcookies.com/sitemap.xml

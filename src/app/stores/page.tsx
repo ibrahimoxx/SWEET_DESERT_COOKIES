@@ -2,68 +2,12 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const sampleStores = [
-  {
-    id: "1",
-    name: "Logan",
-    address: "1352 N Main St",
-    city: "Logan",
-    state: "Utah",
-    zip: "84341",
-    openLate: false,
-  },
-  {
-    id: "2",
-    name: "114th",
-    address: "11417 Slide Rd, Ste 100",
-    city: "Lubbock",
-    state: "Texas",
-    zip: "79424",
-    openLate: true,
-  },
-  {
-    id: "3",
-    name: "Brickyard",
-    address: "3356 S Highland Dr",
-    city: "Salt Lake City",
-    state: "Utah",
-    zip: "84106",
-    openLate: false,
-  },
-  {
-    id: "4",
-    name: "Providence",
-    address: "1285 N 200 E",
-    city: "Providence",
-    state: "Utah",
-    zip: "84332",
-    openLate: true,
-  },
-  {
-    id: "5",
-    name: "Riverton",
-    address: "3622 W 13400 S",
-    city: "Riverton",
-    state: "Utah",
-    zip: "84065",
-    openLate: false,
-  },
-  {
-    id: "6",
-    name: "Draper",
-    address: "177 E 12300 S",
-    city: "Draper",
-    state: "Utah",
-    zip: "84020",
-    openLate: true,
-  },
-];
+import { stores } from "@/data/stores";
 
 export default function StoresPage() {
   const [search, setSearch] = useState("");
 
-  const filteredStores = sampleStores.filter(
+  const filteredStores = stores.filter(
     (store) =>
       store.name.toLowerCase().includes(search.toLowerCase()) ||
       store.city.toLowerCase().includes(search.toLowerCase()) ||

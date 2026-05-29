@@ -5,6 +5,7 @@ import {
   socialLinks,
 } from "@/data/navigation";
 import { SocialIcon } from "./icons";
+import { brand } from "@/data/brand";
 
 export function Footer() {
   return (
@@ -15,12 +16,9 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <span className="text-2xl font-extrabold tracking-tight">
-              CRUMBL
+              {brand.wordmark}
             </span>
-            <p className="mt-4 text-sm text-gray-400">
-              Bringing friends and family together over a box of the best
-              cookies in the world.
-            </p>
+            <p className="mt-4 text-sm text-gray-400">{brand.tagline}</p>
             {/* Social links */}
             <div className="mt-6 flex gap-4">
               {socialLinks.map((social) => (
@@ -87,7 +85,7 @@ export function Footer() {
             </p>
             <div className="mt-4 flex flex-col gap-3">
               <a
-                href="https://apps.apple.com/us/app/crumbl-cookies/id1474607532"
+                href={brand.app.appStore}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-12 w-40 items-center justify-center rounded-lg bg-white text-sm font-semibold text-black transition-opacity hover:opacity-90"
@@ -95,7 +93,7 @@ export function Footer() {
                 App Store
               </a>
               <a
-                href="https://play.google.com/store/apps/details?id=com.crumbl.crumblcookies"
+                href={brand.app.googlePlay}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-12 w-40 items-center justify-center rounded-lg bg-white text-sm font-semibold text-black transition-opacity hover:opacity-90"
@@ -110,7 +108,7 @@ export function Footer() {
         <div className="mt-16 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-xs text-gray-500">
-              &copy; {new Date().getFullYear()} Crumbl, LLC. All rights
+              &copy; {new Date().getFullYear()} {brand.legalName}. All rights
               reserved.
             </p>
             <div className="flex gap-6">
