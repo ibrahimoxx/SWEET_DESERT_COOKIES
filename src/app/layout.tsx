@@ -14,7 +14,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(brand.seo.url),
-  title: brand.seo.title,
+  title: {
+    default: brand.seo.title,
+    template: `%s | ${brand.seo.siteName}`,
+  },
   description: brand.seo.description,
   icons: {
     icon: "/seo/favicon.ico",
