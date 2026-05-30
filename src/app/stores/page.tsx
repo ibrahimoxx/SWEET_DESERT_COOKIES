@@ -2,7 +2,20 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import { stores } from "@/data/stores";
+
+const StoreMap = dynamic(
+  () => import("@/components/StoreMap").then((m) => m.StoreMap),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="flex h-full min-h-125 items-center justify-center bg-gray-100">
+        <p className="text-sm text-gray-400">Loading map…</p>
+      </div>
+    ),
+  }
+);
 
 export default function StoresPage() {
   const [search, setSearch] = useState("");
@@ -84,22 +97,9 @@ export default function StoresPage() {
               )}
             </div>
 
-            {/* Map placeholder */}
+            {/* Live map */}
             <div className="relative hidden overflow-hidden rounded-2xl bg-gray-100 lg:block">
-              <div className="flex h-full min-h-125 items-center justify-center">
-                <div className="text-center">
-                  <p className="text-4xl">🗺️</p>
-                  <p className="mt-4 text-sm text-gray-500">
-                    Map powered by OpenStreetMap
-                  </p>
-                  <p className="text-xs text-gray-400">
-                    Enable location services to find stores near you
-                  </p>
-                </div>
-              </div>
-              <div className="absolute bottom-3 right-3 text-xs text-gray-400">
-                Map data &copy; OpenStreetMap contributors
-              </div>
+              <StoreMap stores={filteredStores} />
             </div>
           </div>
         </div>
