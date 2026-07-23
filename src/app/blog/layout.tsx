@@ -3,24 +3,24 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Locations",
+  title: "Blog",
   description:
-    "Find a Sweet Desert bakery near you. Search by city, state, or zip code.",
+    "Stories, baking tips, and sweet inspiration from the Sweet Desert team.",
   openGraph: {
-    title: "Locations | Sweet Desert",
+    title: "Blog | Sweet Desert",
     description:
-      "Find a Sweet Desert bakery near you. Search by city, state, or zip code.",
+      "Stories, baking tips, and sweet inspiration from the Sweet Desert team.",
   },
 };
 
-export default function StoresLayout({
+export default function BlogLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <>
-      <JsonLd data={breadcrumbSchema("Locations", "/stores")} />
+      <JsonLd data={breadcrumbSchema("Blog", "/blog")} />
       {children}
     </>
   );

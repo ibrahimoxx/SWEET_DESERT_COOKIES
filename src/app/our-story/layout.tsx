@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "How we started and grew into one of the fastest-growing cookie companies.",
+    "How Sweet Desert started and grew into a beloved destination for fresh baked cookies and desserts.",
+  openGraph: {
+    title: "Our Story | Sweet Desert",
+    description:
+      "How Sweet Desert started and grew into a beloved destination for fresh baked cookies and desserts.",
+  },
 };
 
 export default function OurStoryLayout({
@@ -11,5 +18,10 @@ export default function OurStoryLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema("Our Story", "/our-story")} />
+      {children}
+    </>
+  );
 }

@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Order",
   description:
     "Order cookies for pickup, delivery, or catering from a location near you.",
+  openGraph: {
+    title: "Order | Sweet Desert",
+    description:
+      "Order cookies for pickup, delivery, or catering from a location near you.",
+  },
 };
 
 export default function OrderLayout({
@@ -11,5 +18,10 @@ export default function OrderLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema("Order", "/order")} />
+      {children}
+    </>
+  );
 }

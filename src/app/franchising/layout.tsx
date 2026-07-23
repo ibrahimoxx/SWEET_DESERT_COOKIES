@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Franchising",
   description:
-    "Own a franchise. Learn about opportunities to bring cookies to your community.",
+    "Own a Sweet Desert franchise. Learn about opportunities to bring fresh cookies to your community.",
+  openGraph: {
+    title: "Franchising | Sweet Desert",
+    description:
+      "Own a Sweet Desert franchise. Learn about opportunities to bring fresh cookies to your community.",
+  },
 };
 
 export default function FranchisingLayout({
@@ -11,5 +18,10 @@ export default function FranchisingLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema("Franchising", "/franchising")} />
+      {children}
+    </>
+  );
 }
