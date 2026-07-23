@@ -10,7 +10,7 @@ export const mainNavLinks: NavLink[] = [
   { label: "Locations", href: "/stores" },
   { label: "Catering", href: "/catering" },
   { label: "Gift Cards", href: "/giftcards" },
-  { label: "Merch", href: "https://merch.crumbl.com/", external: true },
+  { label: "Merch", href: "#", external: true },
 ];
 
 export const footerCompanyLinks = [
@@ -31,15 +31,15 @@ export const footerGetInvolvedLinks = [
   { label: "Franchising", href: "/franchising" },
   { label: "Franchise Store Jobs", href: "/jobs" },
   { label: "HQ Careers", href: "/careers" },
-  { label: "Crumbl Cares", href: "/crumbl-cares" },
+  { label: "Community", href: "/community" },
 ] as const;
 
 export const socialLinks = [
-  { label: "Facebook", href: "https://www.facebook.com/CrumblCookies", icon: "facebook" },
-  { label: "Instagram", href: "https://www.instagram.com/crumblcookies", icon: "instagram" },
-  { label: "TikTok", href: "https://www.tiktok.com/@crumblcookies", icon: "tiktok" },
-  { label: "X", href: "https://x.com/CrumblCookies", icon: "x" },
-  { label: "YouTube", href: "https://www.youtube.com/@CrumblCookies", icon: "youtube" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/crumbl-cookies", icon: "linkedin" },
-  { label: "Pinterest", href: "https://www.pinterest.com/crumblcookies", icon: "pinterest" },
+  { label: "Facebook", href: "#", icon: "facebook" },
+  { label: "Instagram", href: "#", icon: "instagram" },
+  { label: "TikTok", href: "#", icon: "tiktok" },
+  { label: "X", href: "#", icon: "x" },
+  { label: "YouTube", href: "#", icon: "youtube" },
+  { label: "LinkedIn", href: "#", icon: "linkedin" },
+  { label: "Pinterest", href: "#", icon: "pinterest" },
 ] as const;

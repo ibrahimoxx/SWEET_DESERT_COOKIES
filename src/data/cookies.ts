@@ -54,7 +54,7 @@ export const classicCookies: Cookie[] = [
     id: "milk-chocolate-chip",
     name: "Milk Chocolate Chip Cookie",
     description:
-      "The classic Crumbl chocolate chip cookie — thick, soft, and loaded with rich milk chocolate chips.",
+      "Our classic chocolate chip cookie — thick, soft, and loaded with rich milk chocolate chips.",
     image:
       "https://crumbl.video/6c54f810-416b-4266-a628-fc00b5d4ed49_MilkChocolateChip_FlyingAerial_TECH.png",
     backgroundColor: "#ebac5a",
@@ -65,7 +65,7 @@ export const classicCookies: Cookie[] = [
     id: "pink-sugar",
     name: "Pink Sugar Cookie",
     description:
-      "Crumbl's iconic pink sugar cookie with a perfectly sweet almond-flavored pink frosting.",
+      "Our iconic pink sugar cookie with a perfectly sweet almond-flavored pink frosting.",
     image:
       "https://crumbl.video/568d7e50-71f9-4223-826a-72672312ddbb_ClassicPinkSugar_FlyingAerial_TECH.png",
     backgroundColor: "#FFB9CD",

@@ -16,7 +16,7 @@ export const cateringFeatures: CateringFeature[] = [
   {
     title: "Weekly Rotating Flavors",
     description:
-      "With our expansive menu of 300+ weekly rotating flavors, Crumbl has something for everyone. New flavors drop every Sunday.",
+      "With our expansive menu of weekly rotating flavors, Sweet Desert has something for everyone. New flavors drop every week.",
     icon: "🍪",
   },
   {

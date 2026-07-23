@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://crumblcookies.com";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://sweetdesert.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
@@ -18,7 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/press",
     "/jobs",
     "/careers",
-    "/crumbl-cares",
+    "/community",
     "/dirty-sodas",
     "/collaborate",
     "/privacy",

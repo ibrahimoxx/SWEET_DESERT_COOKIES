@@ -29,8 +29,12 @@ describe("brand config", () => {
     expect(brand.contact.phoneTel).toMatch(/^\d+$/);
   });
 
-  it("app store links are https", () => {
-    expect(brand.app.appStore).toMatch(/^https:\/\//);
-    expect(brand.app.googlePlay).toMatch(/^https:\/\//);
+  it("app store links are https or pending placeholder", () => {
+    if (brand.app.appStore !== "#") {
+      expect(brand.app.appStore).toMatch(/^https:\/\//);
+    }
+    if (brand.app.googlePlay !== "#") {
+      expect(brand.app.googlePlay).toMatch(/^https:\/\//);
+    }
   });
 });

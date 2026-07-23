@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-crumbl-pink">
+    <section className="relative overflow-hidden bg-brand-pink">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
         <div className="flex flex-col items-center text-center">
           <motion.span
@@ -23,7 +23,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-3xl text-4xl font-extrabold tracking-tight text-black sm:text-5xl lg:text-7xl"
           >
-            Crumbl Cookies
+            Sweet Desert
           </motion.h1>
 
           <motion.p
@@ -32,7 +32,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg text-black/70 sm:text-xl"
           >
-            Bringing friends and family together over a box of the best cookies
+            Bringing friends and family together over a box of the best desserts
             in the world. Baked fresh daily in our open kitchens.
           </motion.p>
 

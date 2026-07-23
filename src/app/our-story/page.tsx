@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { milestones, companyStats } from "@/data/milestones";
@@ -8,13 +8,13 @@ export default function OurStoryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-crumbl-cream py-20 sm:py-28">
+      <section className="bg-brand-cream py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-extrabold tracking-tight text-crumbl-dark-brown sm:text-5xl lg:text-6xl"
+              className="text-4xl font-extrabold tracking-tight text-brand-dark-brown sm:text-5xl lg:text-6xl"
             >
               It all started with one big dream
             </motion.h1>
@@ -22,7 +22,7 @@ export default function OurStoryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="mt-6 text-lg text-crumbl-brown"
+              className="mt-6 text-lg text-brand-brown"
             >
               Created in {brand.foundingYear} when co-founders{" "}
               {brand.founders.join(" and ")} teamed up on a quest to bake the
@@ -46,7 +46,7 @@ export default function OurStoryPage() {
                 Our Open Kitchen
               </h2>
               <p className="mt-4 text-lg text-gray-600">
-                At every Crumbl location, our open-concept kitchen design allows
+                At every Sweet Desert location, our open-concept kitchen design allows
                 customers to watch as cookies are mixed, balled, and baked in
                 real-time. It&apos;s an experience unlike any other bakery.
               </p>
@@ -60,7 +60,7 @@ export default function OurStoryPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative aspect-4/3 overflow-hidden rounded-2xl bg-crumbl-pink"
+              className="relative aspect-4/3 overflow-hidden rounded-2xl bg-brand-pink"
             >
               <div className="flex h-full items-center justify-center text-6xl">
                 🍪
@@ -96,7 +96,7 @@ export default function OurStoryPage() {
                   <div className="flex-1 md:text-right">
                     {i % 2 === 0 && (
                       <div className="rounded-2xl bg-white p-6 shadow-sm">
-                        <span className="text-sm font-bold text-crumbl-coral">
+                        <span className="text-sm font-bold text-brand-coral">
                           {milestone.year}
                         </span>
                         <h3 className="mt-1 text-xl font-bold">
@@ -110,12 +110,12 @@ export default function OurStoryPage() {
                   </div>
 
                   {/* Center dot */}
-                  <div className="hidden h-4 w-4 shrink-0 rounded-full bg-crumbl-pink ring-4 ring-white md:block" />
+                  <div className="hidden h-4 w-4 shrink-0 rounded-full bg-brand-pink ring-4 ring-white md:block" />
 
                   <div className="flex-1">
                     {(i % 2 !== 0 || typeof window === "undefined") && (
                       <div className="rounded-2xl bg-white p-6 shadow-sm md:hidden">
-                        <span className="text-sm font-bold text-crumbl-coral">
+                        <span className="text-sm font-bold text-brand-coral">
                           {milestone.year}
                         </span>
                         <h3 className="mt-1 text-xl font-bold">
@@ -128,7 +128,7 @@ export default function OurStoryPage() {
                     )}
                     {i % 2 !== 0 && (
                       <div className="hidden rounded-2xl bg-white p-6 shadow-sm md:block">
-                        <span className="text-sm font-bold text-crumbl-coral">
+                        <span className="text-sm font-bold text-brand-coral">
                           {milestone.year}
                         </span>
                         <h3 className="mt-1 text-xl font-bold">
@@ -148,7 +148,7 @@ export default function OurStoryPage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-crumbl-dark-brown py-16 sm:py-24">
+      <section className="bg-brand-dark-brown py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {companyStats.map((item) => (
@@ -159,7 +159,7 @@ export default function OurStoryPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <p className="text-3xl font-extrabold text-crumbl-pink sm:text-4xl">
+                <p className="text-3xl font-extrabold text-brand-pink sm:text-4xl">
                   {item.stat}
                 </p>
                 <p className="mt-2 text-sm text-gray-300">{item.label}</p>

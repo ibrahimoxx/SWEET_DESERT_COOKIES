@@ -9,9 +9,9 @@ import {
 describe("navigation links", () => {
   it("internal main nav links start with / and external are flagged + absolute", () => {
     for (const link of mainNavLinks) {
-      if (link.external) {
+      if (link.external && link.href !== "#") {
         expect(link.href, link.label).toMatch(/^https?:\/\//);
-      } else {
+      } else if (!link.external) {
         expect(link.href, link.label).toMatch(/^\//);
       }
     }
@@ -23,9 +23,11 @@ describe("navigation links", () => {
     }
   });
 
-  it("social links are https", () => {
+  it("social links are https or pending placeholder", () => {
     for (const s of socialLinks) {
-      expect(s.href, s.label).toMatch(/^https:\/\//);
+      if (s.href !== "#") {
+        expect(s.href, s.label).toMatch(/^https:\/\//);
+      }
     }
   });
 

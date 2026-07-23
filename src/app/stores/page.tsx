@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -52,7 +52,7 @@ export default function StoresPage() {
               placeholder="Search by city, state, or zip code..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="h-12 w-full rounded-full border border-gray-200 px-5 text-sm outline-none transition-shadow focus:border-crumbl-pink focus:ring-2 focus:ring-crumbl-pink/30"
+              className="h-12 w-full rounded-full border border-gray-200 px-5 text-sm outline-none transition-shadow focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/30"
             />
           </motion.div>
         </div>
@@ -70,7 +70,7 @@ export default function StoresPage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
-                  className="cursor-pointer rounded-xl border border-gray-100 p-5 transition-all hover:border-crumbl-pink hover:shadow-md"
+                  className="cursor-pointer rounded-xl border border-gray-100 p-5 transition-all hover:border-brand-pink hover:shadow-md"
                 >
                   <div className="flex items-start justify-between">
                     <div>
@@ -83,7 +83,7 @@ export default function StoresPage() {
                       </p>
                     </div>
                     {store.openLate && (
-                      <span className="rounded-full bg-crumbl-lime px-3 py-1 text-xs font-semibold text-black">
+                      <span className="rounded-full bg-brand-lime px-3 py-1 text-xs font-semibold text-black">
                         Open Late
                       </span>
                     )}

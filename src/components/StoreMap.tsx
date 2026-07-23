@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
@@ -12,7 +12,7 @@ const pinIcon = L.divIcon({
   className: "",
   html: `<span style="
     display:block;width:1.5rem;height:1.5rem;
-    background:var(--crumbl-pink,#ff90bb);
+    background:var(--brand-pink,#ff90bb);
     border:2px solid #fff;border-radius:50% 50% 50% 0;
     transform:rotate(-45deg);
     box-shadow:0 1px 4px rgba(0,0,0,.4);

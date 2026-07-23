@@ -6,7 +6,7 @@ export default function TermsPage() {
       </h1>
       <div className="prose mt-8 max-w-none text-gray-600">
         <p>
-          Welcome to Crumbl Cookies. By accessing or using our website, mobile
+          Welcome to Sweet Desert. By accessing or using our website, mobile
           application, or services, you agree to be bound by these Terms and
           Conditions.
         </p>
@@ -28,8 +28,8 @@ export default function TermsPage() {
         </p>
         <h2 className="mt-8 text-xl font-bold text-black">Gift Cards</h2>
         <p>
-          Gift cards are redeemable only at Crumbl locations, on crumbl.com, and
-          through the Crumbl App. Gift cards are non-refundable and cannot be
+          Gift cards are redeemable only at Sweet Desert locations and through
+          the Sweet Desert App. Gift cards are non-refundable and cannot be
           exchanged for cash.
         </p>
       </div>

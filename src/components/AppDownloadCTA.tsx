@@ -13,7 +13,7 @@ export function AppDownloadCTA() {
             viewport={{ once: true }}
             className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl"
           >
-            Download the Crumbl App
+            Download the Sweet Desert App
           </motion.h2>
 
           <motion.p
@@ -35,7 +35,7 @@ export function AppDownloadCTA() {
             className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
             <a
-              href="https://apps.apple.com/us/app/crumbl-cookies/id1474607532"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-14 items-center justify-center gap-3 rounded-xl bg-white px-8 text-base font-semibold text-black transition-opacity hover:opacity-90"
@@ -46,7 +46,7 @@ export function AppDownloadCTA() {
               App Store
             </a>
             <a
-              href="https://play.google.com/store/apps/details?id=com.crumbl.crumblcookies"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-14 items-center justify-center gap-3 rounded-xl bg-white px-8 text-base font-semibold text-black transition-opacity hover:opacity-90"

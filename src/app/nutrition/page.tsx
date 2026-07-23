@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -56,7 +56,7 @@ export default function NutritionPage() {
               placeholder="Start typing to search products..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="h-12 w-full rounded-full border border-gray-200 px-5 text-sm outline-none focus:border-crumbl-pink focus:ring-2 focus:ring-crumbl-pink/30"
+              className="h-12 w-full rounded-full border border-gray-200 px-5 text-sm outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/30"
             />
           </motion.div>
         </div>

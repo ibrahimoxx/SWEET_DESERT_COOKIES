@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { classicCookies } from "@/data/cookies";
@@ -16,7 +16,7 @@ export function ClassicFlavors() {
             viewport={{ once: true }}
             className="mb-3"
           >
-            <span className="rounded-full bg-crumbl-gold px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+            <span className="rounded-full bg-brand-gold px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
               Always Available
             </span>
           </motion.div>

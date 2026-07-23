@@ -20,10 +20,10 @@ describe("rewards tiers", () => {
     expect(rewardsTiers[0].threshold).toBe(0);
   });
 
-  it("crumbsPerDollar never decreases up the tiers", () => {
+  it("pointsPerDollar never decreases up the tiers", () => {
     for (let i = 1; i < rewardsTiers.length; i++) {
-      expect(rewardsTiers[i].crumbsPerDollar).toBeGreaterThanOrEqual(
-        rewardsTiers[i - 1].crumbsPerDollar
+      expect(rewardsTiers[i].pointsPerDollar).toBeGreaterThanOrEqual(
+        rewardsTiers[i - 1].pointsPerDollar
       );
     }
   });

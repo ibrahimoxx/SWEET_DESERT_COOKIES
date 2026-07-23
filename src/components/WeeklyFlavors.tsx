@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { weeklyCookies, weeklyDateRange } from "@/data/cookies";
@@ -16,7 +16,7 @@ export function WeeklyFlavors() {
             viewport={{ once: true }}
             className="mb-3 flex items-center justify-center gap-3"
           >
-            <span className="rounded-full bg-crumbl-coral px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
+            <span className="rounded-full bg-brand-coral px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">
               This Week Only
             </span>
             <span className="text-sm font-medium text-gray-500">

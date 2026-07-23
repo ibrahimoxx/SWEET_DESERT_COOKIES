@@ -1,8 +1,8 @@
-export function CrumblLogo({ className }: { className?: string }) {
+export function BrandLogo({ className }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 120 24"
+      viewBox="0 0 180 24"
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -14,16 +14,16 @@ export function CrumblLogo({ className }: { className?: string }) {
         fontWeight="800"
         letterSpacing="-0.5"
       >
-        CRUMBL
+        SWEET DESERT
       </text>
     </svg>
   );
 }
 
-export function CrumblWordmark({ className }: { className?: string }) {
+export function BrandWordmark({ className }: { className?: string }) {
   return (
     <div className={className}>
-      <span className="text-2xl font-extrabold tracking-tight">CRUMBL</span>
+      <span className="text-2xl font-extrabold tracking-tight">SWEET DESERT</span>
     </div>
   );
 }

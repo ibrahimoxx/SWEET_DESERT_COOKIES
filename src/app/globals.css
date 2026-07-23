@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  /* Crumbl Brand Colors */
-  --crumbl-pink: #FFB9CD;
-  --crumbl-cream: #fae2c2;
-  --crumbl-black: #000000;
-  --crumbl-white: #ffffff;
-  --crumbl-brown: #7e573e;
-  --crumbl-dark-brown: #573c31;
-  --crumbl-darker-brown: #643c29;
-  --crumbl-lime: #cddc85;
-  --crumbl-blue: #5870ac;
-  --crumbl-coral: #ff908f;
-  --crumbl-gold: #ebac5a;
-  --crumbl-magenta: #ff6fc2;
+  /* Brand Colors */
+  --brand-pink: #FFB9CD;
+  --brand-cream: #fae2c2;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+  --brand-brown: #7e573e;
+  --brand-dark-brown: #573c31;
+  --brand-darker-brown: #643c29;
+  --brand-lime: #cddc85;
+  --brand-blue: #5870ac;
+  --brand-coral: #ff908f;
+  --brand-gold: #ebac5a;
+  --brand-magenta: #ff6fc2;
 
   /* Semantic */
   --background: #ffffff;
@@ -25,16 +25,16 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-crumbl-pink: var(--crumbl-pink);
-  --color-crumbl-cream: var(--crumbl-cream);
-  --color-crumbl-brown: var(--crumbl-brown);
-  --color-crumbl-dark-brown: var(--crumbl-dark-brown);
-  --color-crumbl-darker-brown: var(--crumbl-darker-brown);
-  --color-crumbl-lime: var(--crumbl-lime);
-  --color-crumbl-blue: var(--crumbl-blue);
-  --color-crumbl-coral: var(--crumbl-coral);
-  --color-crumbl-gold: var(--crumbl-gold);
-  --color-crumbl-magenta: var(--crumbl-magenta);
+  --color-brand-pink: var(--brand-pink);
+  --color-brand-cream: var(--brand-cream);
+  --color-brand-brown: var(--brand-brown);
+  --color-brand-dark-brown: var(--brand-dark-brown);
+  --color-brand-darker-brown: var(--brand-darker-brown);
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-coral: var(--brand-coral);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-magenta: var(--brand-magenta);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --font-sans: var(--font-inter);

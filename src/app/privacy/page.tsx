@@ -6,7 +6,7 @@ export default function PrivacyPage() {
       </h1>
       <div className="prose mt-8 max-w-none text-gray-600">
         <p>
-          Crumbl, LLC (&ldquo;Crumbl,&rdquo; &ldquo;we,&rdquo;
+          Sweet Desert, LLC (&ldquo;Sweet Desert,&rdquo; &ldquo;we,&rdquo;
           &ldquo;us,&rdquo; or &ldquo;our&rdquo;) is committed to protecting
           your privacy. This Privacy Policy explains how we collect, use,
           disclose, and safeguard your information when you visit our website,
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
         <h2 className="mt-8 text-xl font-bold text-black">Contact Us</h2>
         <p>
           If you have questions about this Privacy Policy, please contact us at
-          support@crumblcookies.com.
+          hello@sweetdesert.com.
         </p>
       </div>
     </div>

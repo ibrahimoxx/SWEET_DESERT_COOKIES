@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -8,21 +8,21 @@ export default function CateringPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-crumbl-cream py-20 sm:py-28">
+      <section className="relative bg-brand-cream py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-extrabold tracking-tight text-crumbl-dark-brown sm:text-5xl lg:text-6xl"
+              className="text-4xl font-extrabold tracking-tight text-brand-dark-brown sm:text-5xl lg:text-6xl"
             >
-              Crumbl Catering
+              Sweet Desert Catering
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="mt-6 text-lg text-crumbl-brown"
+              className="mt-6 text-lg text-brand-brown"
             >
               Transform every occasion into a sweet celebration. Just select
               your nearest store and schedule your order in a few clicks.
@@ -41,9 +41,9 @@ export default function CateringPage() {
               </Link>
               <Link
                 href="/stores"
-                className="inline-flex h-14 items-center justify-center rounded-full border-2 border-crumbl-dark-brown px-8 text-base font-semibold text-crumbl-dark-brown transition-colors hover:bg-crumbl-dark-brown hover:text-white"
+                className="inline-flex h-14 items-center justify-center rounded-full border-2 border-brand-dark-brown px-8 text-base font-semibold text-brand-dark-brown transition-colors hover:bg-brand-dark-brown hover:text-white"
               >
-                Find My Local Crumbl
+                Find My Local Store
               </Link>
             </motion.div>
           </div>
@@ -63,7 +63,7 @@ export default function CateringPage() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-crumbl-pink text-3xl">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-pink text-3xl">
                   {feature.icon}
                 </div>
                 <h3 className="mt-6 text-xl font-bold">{feature.title}</h3>
@@ -109,7 +109,7 @@ export default function CateringPage() {
               increments of 12. Order through the app or online.
             </p>
 
-            <div className="mt-12 rounded-2xl bg-crumbl-pink/20 p-8">
+            <div className="mt-12 rounded-2xl bg-brand-pink/20 p-8">
               <h3 className="text-xl font-bold">Need a Large Order?</h3>
               <p className="mt-2 text-gray-600">
                 Call our catering specialists for white glove service on orders

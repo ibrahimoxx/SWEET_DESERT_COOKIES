@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -60,7 +60,7 @@ export default function OrderPage() {
             >
               <Link
                 href={type.href}
-                className="group flex flex-col items-center rounded-2xl border-2 border-gray-200 p-8 text-center transition-all hover:border-crumbl-pink hover:shadow-lg"
+                className="group flex flex-col items-center rounded-2xl border-2 border-gray-200 p-8 text-center transition-all hover:border-brand-pink hover:shadow-lg"
               >
                 <span className="text-4xl">{type.icon}</span>
                 <h2 className="mt-4 text-xl font-bold">{type.title}</h2>
@@ -84,9 +84,9 @@ export default function OrderPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 + i * 0.05 }}
-                className="cursor-pointer rounded-2xl bg-crumbl-pink/10 p-6 text-center transition-all hover:bg-crumbl-pink/20"
+                className="cursor-pointer rounded-2xl bg-brand-pink/10 p-6 text-center transition-all hover:bg-brand-pink/20"
               >
-                <p className="text-2xl font-extrabold text-crumbl-dark-brown">
+                <p className="text-2xl font-extrabold text-brand-dark-brown">
                   {size.replace("-Pack", "")}
                 </p>
                 <p className="mt-1 text-sm font-medium text-gray-600">
